@@ -5,8 +5,8 @@ excerpt: "Bio."
 sitemap: true
 permalink: /about/
 header:
-  image: images/estonia-lake.jpg
-  caption: "Camping in Estonia"
+  image: images/toronto.jpg
+  caption: "Toronto"
 ---
 
 I'm a Data Scientist. My interests include data science, data analysis, geospatial analysis, effective data visualization and programming in R and Python.
