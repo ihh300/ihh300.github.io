@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Data Science | Data analysis"
+title                    : "Isabelle H"
 title_separator          : "-"
 name                     : "Isabelle H"
-description              : "My portfolio"
+description              : "Data Science | Data Analysis Portfolio"
 url                      : https://ihh300.github.io/
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : ihh300/ihh300.github.io
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Isabelle H"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Data scientist"
+  bio              : "Data Science | Data Analysis Portfolio"
   location         : "Canada | France | UK"
   email            :
   links:
@@ -137,7 +137,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: https://github.com/ihh300/
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -289,3 +289,10 @@ defaults:
       comments: # true
       share: true
       related: true
+ # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
