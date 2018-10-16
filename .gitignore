@@ -13,6 +13,11 @@ Gemfile.lock
 node_modules
 npm-debug.log*
 
+######## Privacy - API and private key
+private.py
+
+
+
 ######## Python 
 
 # projects file (Python)
