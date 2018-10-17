@@ -1,5 +1,6 @@
-title: "Photo gallery"
-excerpt: "My photo gallery for inspiration"
+---
+title: "Photography"
+excerpt: "My photography gallery"
 header:
   image: /assets/images/xxx.jpg
   teaser: /assets/images/yyy.jpg
