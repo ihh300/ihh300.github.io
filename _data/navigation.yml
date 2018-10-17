@@ -1,10 +1,10 @@
 # main links
 main:
-- title: "About"
+  - title: "About"
     url: /about/
-- title: "Posts"
+  - title: "Posts"
     url: /posts-archive/
-- title: "Photography"
+  - title: "Photography"
     url: /collection-archive/
 
   
