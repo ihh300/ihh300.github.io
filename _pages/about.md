@@ -5,7 +5,7 @@ excerpt: "Bio."
 sitemap: true
 permalink: /about/
 header:
-  image: images/toronto.jpg
+  image: assets/images/banner/banner_toronto.jpg
   caption: "Toronto"
 ---
 
