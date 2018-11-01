@@ -1,6 +1,6 @@
 ---
-title: "Photography"
-excerpt: "My photography gallery"
+title: "Canada"
+excerpt: "Canada photo gallery"
 gallery:
 - url: /assets/images/photography/newfounland_round.jpg
     image_path: assets/images/newfounland_round_th.jpg
