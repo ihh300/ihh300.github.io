@@ -1,8 +1,8 @@
 Isabelle H:
   name        : "Isabelle H"
-  bio         : "Data Science | Data Analysis"
+  bio         : "Data Science | Data Analysis Portfolio"
   avatar      : "/assets/images/bio-photo.jpg"
   links:
-    - label: "Website"
+    - label: "GitHub"
       icon: "/assets/images/bio-photo.jpg"
       url: "https://ihh300.github.io/"
