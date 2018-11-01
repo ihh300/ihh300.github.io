@@ -10,6 +10,7 @@ header:
   image: assets/images/banner/ihh330-half.jpg
   caption: "Data science ©ihh300"
 toc: true
+toc_sticky: true
 ---
 
 ### Fraud: a definition
