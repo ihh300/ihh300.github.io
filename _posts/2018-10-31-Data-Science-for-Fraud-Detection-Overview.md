@@ -12,8 +12,6 @@ header:
 toc: true
 ---
 
-# An overview of data science for fraud detection
-
 ### Fraud: a definition
 
 Fraud is defined as the wrongful or criminal deception intended to result in financial or personal gain.
