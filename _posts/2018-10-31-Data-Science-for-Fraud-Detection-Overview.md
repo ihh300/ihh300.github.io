@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: "An overview of data science for fraud detection"
 description: "Using data science to detect fraud"
 category: banking
