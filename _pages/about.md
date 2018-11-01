@@ -5,7 +5,7 @@ excerpt: "Bio."
 sitemap: true
 permalink: /about/
 header:
-  image: assets/images/banner/banner_toronto.jpg
+  image: assets/images/banner/ihh310_about.jpg
   caption: "Toronto ©ihh300"
 ---
 
