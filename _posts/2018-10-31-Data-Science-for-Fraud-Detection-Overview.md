@@ -6,6 +6,9 @@ category: banking
 tags: [banking, fraud detection]
 author: Isabelle H
 comments: false
+header:
+  image: assets/images/banner/ihh330-post.jpg
+  caption: "Data science ©ihh300"
 ---
 
 # An overview of data science for fraud detection
