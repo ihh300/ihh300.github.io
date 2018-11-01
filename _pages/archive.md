@@ -2,6 +2,9 @@
 layout: archive
 title: "Posts"
 permalink: /archive/
+header:
+  image: assets/images/banner/banner_toronto.jpg
+  caption: "Toronto"
 author_profile: false
 ---
 
