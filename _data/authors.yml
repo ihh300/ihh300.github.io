@@ -1,0 +1,8 @@
+Billy Rick:
+  name        : "Isabelle H"
+  bio         : "Data Science | Data Analysis"
+  avatar      : "/assets/images/bio-photo-2.jpg"
+  links:
+    - label: "Website"
+      icon: "/assets/images/bio-photo.jpg"
+      url: "https://ihh300.github.io/"
