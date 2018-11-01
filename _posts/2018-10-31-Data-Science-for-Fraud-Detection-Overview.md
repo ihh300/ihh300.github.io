@@ -6,6 +6,8 @@ category: banking
 tags: [banking, fraud detection]
 author: Isabelle H
 comments: false
+toc: true
+toc_label: "Fraud detection"
 ---
 
 # An overview of data science for fraud detection
