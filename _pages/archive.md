@@ -1,6 +1,8 @@
 ---
-layout: page
-title: Archive
+layout: archive
+title: "Posts"
+permalink: /archive/
+author_profile: false
 ---
 
 ## Blog Posts
