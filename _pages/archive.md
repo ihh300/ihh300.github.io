@@ -4,7 +4,7 @@ title: "Posts"
 permalink: /archive/
 header:
   image: assets/images/banner/ihh330-post.jpg
-  caption: "Toronto"
+  caption: "Data science ©ihh300"
 author_profile: false
 ---
 
