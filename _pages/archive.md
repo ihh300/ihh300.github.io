@@ -5,6 +5,7 @@ permalink: /archive/
 header:
   image: assets/images/banner/ihh330-post.jpg
   caption: "Data science ©ihh300"
+classes: wide
 author_profile: false
 ---
 
