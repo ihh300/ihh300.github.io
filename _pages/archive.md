@@ -3,7 +3,7 @@ layout: archive
 title: "Posts"
 permalink: /archive/
 header:
-  image: assets/images/banner/banner_toronto.jpg
+  image: assets/images/banner/ihh330-post.jpg
   caption: "Toronto"
 author_profile: false
 ---
