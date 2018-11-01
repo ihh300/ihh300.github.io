@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: single
 title: "An overview of data science for fraud detection"
 description: "Using data science to detect fraud"
 category: banking
