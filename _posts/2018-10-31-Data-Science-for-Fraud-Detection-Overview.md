@@ -4,6 +4,7 @@ title: "An overview of data science for fraud detection"
 description: "Using data science to detect fraud"
 category: banking
 tags: [banking, fraud detection]
+author: Isabelle H
 comments: false
 ---
 
