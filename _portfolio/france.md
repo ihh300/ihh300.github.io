@@ -1,6 +1,6 @@
 ---
-title: "Photography"
-excerpt: "My photography gallery"
+title: "France"
+excerpt: "France photo gallery"
 gallery:
   - url: /assets/images/photography/lecorbusier_round.jpg
     image_path: /assets/images/photography/lecorbusier_round_th.jpg
