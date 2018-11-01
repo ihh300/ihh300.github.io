@@ -6,7 +6,7 @@ sitemap: true
 permalink: /about/
 header:
   image: assets/images/banner/banner_toronto.jpg
-  caption: "Toronto"
+  caption: "Toronto ©ihh300"
 ---
 
 I'm a Data Scientist. My interests include data science, data analysis, geospatial analysis, effective data visualization and programming in R and Python.
