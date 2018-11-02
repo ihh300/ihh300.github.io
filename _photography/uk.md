@@ -18,6 +18,17 @@ gallery_uk:
     
 ---
 
-{% include flexgallery id="gallery_uk" caption="Photographies while living in United Kingdom (Pictures courtesy of Isabelle H)"%}
+----------------------------------------------------------------------------
+
+![Phone booth](/assets/images/photography/London.jpg){: .css-class}
+
+----------------------------------------------------------------------------
+
+![The bridge](/assets/images/photography/london2.jpg){: .css-class}
+
+----------------------------------------------------------------------------
+
+![Blossoming](/assets/images/photography/london3.jpg){: .css-class}
+
 
 
