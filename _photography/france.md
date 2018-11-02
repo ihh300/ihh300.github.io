@@ -10,6 +10,6 @@ gallery_france:
     image_path: /assets/images/photography/paris_round_th.jpg
     alt: "Paris - France - ©ihh300"
 ---
-{% include gallery id="gallery_france" caption="Isabelle H photography gallery - All pictures copyright Isabelle H" %}
+{% include gallery id="gallery_france" layout="half" caption="Isabelle H photography gallery - All pictures copyright Isabelle H" %}
 
 
