@@ -154,9 +154,11 @@ include:
   - .htaccess
   - _pages
 collections:
-  portfolio:
+- photography
+collections:
+  photography:
     output: true
-    permalink: /:collection/:path/
+    permalink: /photography/:path/
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
