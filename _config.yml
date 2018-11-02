@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Isabelle H"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Data Science | Data Analysis Portfolio"
+  bio              : "Data Science Portfolio"
   location         : "Canada | France | UK"
   email            :
   links:
@@ -307,5 +307,5 @@ defaults:
       type: portfolio
     values:
       layout: single
-      author_profile: false
+      author_profile: true
       share: true
