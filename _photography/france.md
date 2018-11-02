@@ -20,6 +20,10 @@ gallery_france:
 
 ----------------------------------------------------------------------------
 
+![Paris - Tuileries garden](/assets/images/photography/paris2.jpg){: .css-class}
+
+----------------------------------------------------------------------------
+
 ![Marseille France](/assets/images/photography/marseille.jpg){: .css-class}
 
 ----------------------------------------------------------------------------
@@ -28,7 +32,7 @@ gallery_france:
 
 ----------------------------------------------------------------------------
 
-![Paris - Tuileries garden](/assets/images/photography/paris2.jpg){: .css-class}
+
 
 
 
