@@ -28,7 +28,7 @@ gallery_france:
 
 ----------------------------------------------------------------------------
 
-![Paris - Tuileries garden](/assets/images/photography/paris2_th.jpg){: .css-class}
+![Paris - Tuileries garden](/assets/images/photography/paris2.jpg){: .css-class}
 
 
 
