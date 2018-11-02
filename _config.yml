@@ -154,6 +154,7 @@ include:
   - .htaccess
   - _pages
 collections:
+  - portfolio
   portfolio:
     output: true
     permalink: /:collection/:path/
