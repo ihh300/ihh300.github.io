@@ -1,5 +1,6 @@
 
 ---
+layout: single
 title: "Canada"
 excerpt: "Canada photo gallery"
 gallery_canada:
