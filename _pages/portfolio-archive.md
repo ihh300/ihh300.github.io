@@ -1,10 +1,11 @@
 ---
 title: Photography
 layout: collection
-permalink: /portfolio/
 collection: portfolio
-entries_layout: grid
+permalink: /portfolio/
+entries_layout: list
+show_excerpts: false
+sort_by: title
+sort_order: forward
 classes: wide
 ---
-
-I have grouped here the photographies I have taken around the world and related memories and life lessons.
