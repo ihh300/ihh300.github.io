@@ -1,7 +1,7 @@
 ---
 title: "France"
 excerpt: "France photo gallery"
-gallery:
+gallery_france:
   - url: /assets/images/photography/lecorbusier_round.jpg
     image_path: /assets/images/photography/lecorbusier_round_th.jpg
     alt: "Marseille - La Cite radieuse - Le Corbusier - ©ihh300"
@@ -9,6 +9,6 @@ gallery:
     image_path: /assets/images/photography/paris_round_th.jpg
     alt: "Paris - France - ©ihh300"
 ---
-{% include gallery id="gallery" caption="Isabelle H photography gallery - All pictures copyright Isabelle H" %}
+{% include gallery id="gallery_france" caption="Isabelle H photography gallery - All pictures copyright Isabelle H" %}
 
 
