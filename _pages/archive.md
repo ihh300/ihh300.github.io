@@ -3,7 +3,7 @@ layout: archive
 title: "Posts"
 permalink: /archive/
 header:
-  image: assets/images/banner/ihh330-post.jpg
+  image: assets/images/banner/ihh330-half.jpg
   caption: "Data science ©ihh300"
 classes: wide
 ---
