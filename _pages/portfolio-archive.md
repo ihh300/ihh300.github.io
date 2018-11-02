@@ -9,3 +9,4 @@ sort_by: title
 sort_order: forward
 classes: wide
 ---
+My photography gallery of pictures taken in Canada, France and United Kingdom.
