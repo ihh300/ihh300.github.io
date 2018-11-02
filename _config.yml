@@ -303,10 +303,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-# _portfolio
+# _photography
   - scope:
       path: ""
-      type: portfolio
+      type: photography
     values:
       layout: single
       author_profile: true
