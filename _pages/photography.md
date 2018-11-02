@@ -10,10 +10,16 @@ classes: wide
 ---
 My photography gallery of pictures taken in Canada, France and United Kingdom.
 
-{% for photography in site.photography %}
-<a href="{{ photography.url | prepend: site.baseurl }}">
-        <h2>{{ photography.title }}</h2>
-</a>
-{% endfor %}      
+---------------------------------------------------------------------------------
 
+### [Canada](https://ihh300.github.io/photography/canada/)
 
+---------------------------------------------------------------------------------
+
+### [France](https://ihh300.github.io/photography/france/)
+
+---------------------------------------------------------------------------------
+
+### United Kingdom
+
+---------------------------------------------------------------------------------
