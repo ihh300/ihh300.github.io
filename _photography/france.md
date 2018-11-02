@@ -18,7 +18,18 @@ gallery_france:
     
 ---
 
-{% include flexgallery id="gallery_france" caption="Photographies celebrating the beauty of France (Pictures courtesy of Isabelle H)"%}
+----------------------------------------------------------------------------
+
+![Marseille France](/assets/images/photography/marseille.jpg){: .css-class}
+
+----------------------------------------------------------------------------
+
+![Paris - Urbanism](/assets/images/photography/paris.jpg){: .css-class}
+
+----------------------------------------------------------------------------
+
+![Paris - Tuileries garden](/assets/images/photography/paris2_th.jpg){: .css-class}
+
 
 
 
