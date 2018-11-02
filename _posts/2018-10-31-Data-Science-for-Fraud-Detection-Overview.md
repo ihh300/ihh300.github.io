@@ -11,6 +11,7 @@ header:
 toc: true
 toc_sticky: true
 ---
+Fraud detection and its application in data science is a burgeonning field. This article gives an overview of the business challenges data scientists solve when dealing with fraud detection.
 
 ### Fraud: a definition
 
