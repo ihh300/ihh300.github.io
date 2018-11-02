@@ -1,4 +1,5 @@
 ---
+layout: single
 title: "France"
 excerpt: "France photo gallery"
 gallery_france:
