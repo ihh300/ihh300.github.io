@@ -6,5 +6,8 @@ classes: wide
 ---
 My photography gallery of pictures taken in Canada, France and United Kingdom.
 
-{% for page in site.photography %}
-    {% page.featured = 'true' %}
+{% for photography in site.photography %}
+  <a href="{{ photography.url }}">
+    <h2>{{ photography.title }}</h2>
+  </a>
+{% endfor %}
