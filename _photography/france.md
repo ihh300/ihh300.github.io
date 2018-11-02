@@ -3,13 +3,22 @@ layout: single
 title: "France"
 excerpt: "France photo gallery"
 gallery_france:
-  - url: /assets/images/photography/lecorbusier_round.jpg
-    image_path: /assets/images/photography/lecorbusier_round_th.jpg
-    alt: "Marseille - La Cite radieuse - Le Corbusier - ©ihh300"
-  - url: /assets/images/photography/paris_round.jpg
-    image_path: /assets/images/photography/paris_round_th.jpg
-    alt: "Paris - France - ©ihh300"
+  - aspect: "0.4"
+    url: /assets/images/photography/marseille.jpg
+    image_path: /assets/images/photography/marseille_th.jpg
+    alt: "Marseille - La vieille charite"
+  - aspect: "0.4"
+    url: /assets/images/photography/paris.jpg
+    image_path: /assets/images/photography/paris_th.jpg
+    alt: "Paris - Urbanism"
+   - aspect: "1.4"
+    url: /assets/images/photography/paris2.jpg
+    image_path: /assets/images/photography/paris2_th.jpg
+    alt: "Paris - Tuileries garden"
+    
 ---
-{% include gallery id="gallery_france" layout="half" caption="Isabelle H photography gallery - All pictures copyright Isabelle H" %}
+
+{% include flexgallery id="gallery_france" caption="Photographies celebrating the beauty of France (Pictures courtesy of Isabelle H)"%}
+
 
 
