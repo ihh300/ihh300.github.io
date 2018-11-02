@@ -8,4 +8,4 @@ gallery_canada:
     alt: "Corner Brook - Newfoundland - ©ihh300"
   
 ---
-{% include gallery id="gallery_canada" caption="Isabelle H photography gallery - All pictures copyright Isabelle H" %}
+{% include gallery id="gallery_canada" layout="half" caption="Isabelle H photography gallery - All pictures copyright Isabelle H" %}
