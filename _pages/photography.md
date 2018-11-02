@@ -1,7 +1,7 @@
 ---
 title: Photography
 layout: single
-permalink: /portfolio/
+permalink: /photography/
 classes: wide
 ---
 My photography gallery of pictures taken in Canada, France and United Kingdom.
@@ -11,5 +11,12 @@ My photography gallery of pictures taken in Canada, France and United Kingdom.
   {{ photography.title }}
 {% endtablerow %}
 </table>
+
+
+{% for photography in site.photography %}
+<a href="{{ photography.url | prepend: site.baseurl }}">
+        <h2>{{ photography.title }}</h2>
+</a>
+{% endfor %}      
 
 
