@@ -2,7 +2,11 @@
 title: Photography
 layout: single
 permalink: /photography/
+header:
+  image: assets/images/banner/ihh330-post.jpg
+  caption: "Data science ©ihh300"
 classes: wide
+
 ---
 My photography gallery of pictures taken in Canada, France and United Kingdom.
 
