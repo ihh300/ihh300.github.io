@@ -6,11 +6,5 @@ classes: wide
 ---
 My photography gallery of pictures taken in Canada, France and United Kingdom.
 
-<ul>
-  {% for portfolio in site.portfolio %}
-    <li>
-      <a href="{{ portfolio.url }}">{{ portfolio.title }}</a>
-      - {{ portfolio.headline }}
-    </li>
-  {% endfor %}
-</ul>
+{% for page in site.portfolio %}
+    {% page.featured = 'true' %}
