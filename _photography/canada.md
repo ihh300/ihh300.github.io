@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: splash
 title: "Canada"
 excerpt: "Canada photo gallery"
 gallery_canada:
