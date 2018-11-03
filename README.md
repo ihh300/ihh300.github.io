@@ -15,6 +15,10 @@ This website was built with:
 3. Github and [GIT](https://git-scm.com/) - for version control 
 4. [Sublime text](https://www.sublimetext.com/) - for source file editing 
 
+##### Creating this website
+
+I have customised the initial css files and I have added my own assets (icon, photography) so to create my own adobe.
+
 ##### Disclaimer
 --------------------------
 * licence for this website: the MIT applies https://opensource.org/licenses/MIT
