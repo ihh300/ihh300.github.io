@@ -3,7 +3,7 @@ layout: archive
 author_profile: true
 excerpt: "Blog on data science, data analysis and visualization"
 header:
-  image: assets/images/banner/home.jpg
+  image: assets/images/banner/home-half.jpg
   caption: "Data science ©ihh300"
 classes: wide
 ---
