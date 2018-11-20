@@ -94,7 +94,7 @@ In addition, the boxplot of Amount by Class displays the distribution for each c
 ![Boxplot - vi variables](/assets/images/credit_card/eda/eda_ccf_amount_class_boxplot.jpeg)
 
 ### Vi versus Class
-Comparing the various Vi versus Class using density curve and ranking with percentile values among Class, it can be concluded,
+Comparing the various Vi versus Class using density curve and ranking with percentile values among Class, show the explanatory potential of Vi variables in regards with fraudulent transactions.
 ![Density curve - Vi by Class](/assets/images/credit_card/eda/eda_ccf_bi_vi_class_density.jpeg)
 ![Percentile - Vi by Class](/assets/images/credit_card/eda/eda_ccf_bi_vi_class_rank.jpeg)
 
