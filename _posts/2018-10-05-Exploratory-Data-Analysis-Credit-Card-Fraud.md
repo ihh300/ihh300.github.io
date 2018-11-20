@@ -1,10 +1,12 @@
 ---
-layout: post
+layout: single
 title: "Exploratory Data Analysis - Credit Card Fraud"
 description: "A step by step EDA of credit card fraud transactions"
 category: banking
-tags: [banking, r]
+tags: [banking, r, fraud detection]
 comments: false
+toc: true
+toc_sticky: true
 ---
 
 ## Overview
