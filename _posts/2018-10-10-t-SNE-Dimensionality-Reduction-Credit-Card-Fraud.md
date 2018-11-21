@@ -19,7 +19,7 @@ data very well, while also revealing global structure such as the presence of cl
 ## Core concepts to understand t-SNE
 In order to understand t-SNE, some concepts were introduced:
 
-* **Similarity**. The similarity of one datapoint xj to another datapoint xi is the conditional probability pj|i, that xi would pick xj as its neighbor if neighbors were picked in proportion to their Gaussian probability density centered at xi.
+* **Similarity**. The similarity of one datapoint xj to another datapoint xi is the conditional probability $$ pj|i $$, that xi would pick xj as its neighbor if neighbors were picked in proportion to their Gaussian probability density centered at xi.
 
 * **Perplexity**. Perplexity is a defined as a measure for information as 2 to the power of the Shannon entropy. Perplexity is a parameter set up by the data scientist so to instruct the algorithm to measure the effective number of neighbors. [van der Maaten and Hinton][1] suggests to use perplexity values in the range [5 - 50] and to use a higher perplexity for larger datasets.
 
