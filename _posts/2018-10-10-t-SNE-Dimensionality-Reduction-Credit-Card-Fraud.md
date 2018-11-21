@@ -17,7 +17,8 @@ t-SNE was introduced by [van der Maaten and Hinton][1] in 2008, in a foundation 
 data very well, while also revealing global structure such as the presence of clusters at several scales*.
 
 ## Core concepts to understand t-SNE
-In order to understand t-SNE, some concepts were introduced by
+In order to understand t-SNE, some concepts were introduced:
+
 * **Similarity**. The similarity of one datapoint xj to another datapoint xi is the conditional probability pj|i, that xi would pick xj as its neighbor if neighbors were picked in proportion to their Gaussian probability density centered at xi.
 * **Perplexity**. Perplexity is a defined as a measure for information as 2 to the power of the Shannon entropy. Perplexity is a parameter set up by the data scientist so to instruct the algorithm to measure the effective number of neighbors. [van der Maaten and Hinton][1] suggests to use perplexity values in the range [5 - 50] and to use a higher perplexity for larger datasets.
 
@@ -26,11 +27,10 @@ As t-SNE has a non-convex objective function, minimized using a gradient descent
 
 ## How does t-SNE work?
 t-Distributed Stochastic Neighbor Embedding (t-SNE) reduces dimensionality using [Barnes-Hut approximations][2]. It maps high dimensional data to two or more dimensions, suitable in order to visualize their relationships using a stepped approach:
+
 1. Computation of pairwise affinities pj|i in the high dimensional space by conversion of the high-dimensional Euclidean distances
 between data points into high dimension conditional probabilities pj|i that represent similarities, and constrained by the user defined perplexity Perp. In the high-dimensional space, the conversion of distances into probabilities is done using a Gaussian distribution.
-2. Computation of a pairwise affinities in the low dimension space, as conditional probability qj|i for the low-dimensional counterparts yi and yj of the high-dimensional datapoints xi and xj, so to model pairwise similarities. In the lower-dimensional map, a Student t-distribution with one degree of freedom is used to convert distances
-into probabilities (so to avoid the *“crowding
-problem"*)
+2. Computation of a pairwise affinities in the low dimension space, as conditional probability qj|i for the low-dimensional counterparts yi and yj of the high-dimensional datapoints xi and xj, so to model pairwise similarities. In the lower-dimensional map, a Student t-distribution with one degree of freedom is used to convert distances into probabilities (so to avoid the *“crowding problem"*)
 
 To Create the low-dimensional data representation, t-SNE reduces the mismatch between the corresponding high and low dimension conditional probabilities by minimizing the sum of Kullback-Leibler divergences over all datapoints using a gradient descent method whose cost function is designed so to retain the nearby map points, favoring the local structure of the data in the map.
 
@@ -44,6 +44,7 @@ t-SNE is performed on the training dataset after a 70/30 partition to generate a
 
 ## Hyper-parameters setting for t-SNE
 In this t-SNE computed with r, the [tsne: T-Distributed Stochastic Neighbor Embedding for R][3] is used. The main hyper-parameters are:
+
 * k - the dimension of the resulting embedding
 * initial_dims - The number of dimensions to use in reduction method.
 * perplexity - Perplexity parameter. (optimal number of neighbors)
@@ -51,10 +52,12 @@ In this t-SNE computed with r, the [tsne: T-Distributed Stochastic Neighbor Embe
 
 ## Using t-SNE visualization on an imbalanced dataset
 From the training dataset of instances, I have randomly sampled the observations so to get a subset of the initial unbalanced dataset. As shown in the figure below, t-SNE is able to separate legitimate and fraudulent transactions despite the minority instances for the fraudulent transactions.
+
 ![t-SNE visualization on an imbalanced dataset](/assets/images/credit_card/tsne/tsne_ccf_imb.jpeg)
 
 ## Using t-SNE visualization on a balanced dataset
 The dataset was balanced by using r ROSE OVUN module so to reach an even distribution of fraud and legitimate transactions. The resulting t-SNE spots efficiently the binary classification of the target Class.  
+
 ![t-SNE visualization on a balanced (undersampled) dataset](/assets/images/credit_card/tsne/tsne_ccf_balanc.jpeg)
 
 ## Conclusion of the t-SNE
