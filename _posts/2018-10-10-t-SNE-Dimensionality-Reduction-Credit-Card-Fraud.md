@@ -20,6 +20,7 @@ data very well, while also revealing global structure such as the presence of cl
 In order to understand t-SNE, some concepts were introduced:
 
 * **Similarity**. The similarity of one datapoint xj to another datapoint xi is the conditional probability pj|i, that xi would pick xj as its neighbor if neighbors were picked in proportion to their Gaussian probability density centered at xi.
+
 * **Perplexity**. Perplexity is a defined as a measure for information as 2 to the power of the Shannon entropy. Perplexity is a parameter set up by the data scientist so to instruct the algorithm to measure the effective number of neighbors. [van der Maaten and Hinton][1] suggests to use perplexity values in the range [5 - 50] and to use a higher perplexity for larger datasets.
 
 ## Non reproducibility of t-SNE visualizations
@@ -30,6 +31,7 @@ t-Distributed Stochastic Neighbor Embedding (t-SNE) reduces dimensionality using
 
 1. Computation of pairwise affinities pj|i in the high dimensional space by conversion of the high-dimensional Euclidean distances
 between data points into high dimension conditional probabilities pj|i that represent similarities, and constrained by the user defined perplexity Perp. In the high-dimensional space, the conversion of distances into probabilities is done using a Gaussian distribution.
+
 2. Computation of a pairwise affinities in the low dimension space, as conditional probability qj|i for the low-dimensional counterparts yi and yj of the high-dimensional datapoints xi and xj, so to model pairwise similarities. In the lower-dimensional map, a Student t-distribution with one degree of freedom is used to convert distances into probabilities (so to avoid the *“crowding problem"*)
 
 To Create the low-dimensional data representation, t-SNE reduces the mismatch between the corresponding high and low dimension conditional probabilities by minimizing the sum of Kullback-Leibler divergences over all datapoints using a gradient descent method whose cost function is designed so to retain the nearby map points, favoring the local structure of the data in the map.
