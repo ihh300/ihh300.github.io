@@ -63,7 +63,7 @@ The dataset was balanced by using r ROSE OVUN module so to reach an even distrib
 ## Conclusion of the t-SNE
 t-SNE provides a robust way of distinction between fraudulent and legitimate transactions. In addition, the comparison between the two visualizations has shown the interest of dataset re-sampling techniques as an initial step prior to any modeling so to improve discrimination at the learning stage. Comparing those sampling / balancing techniques are the main topic of a further article. In the rest of this project, no further dimensionality reduction technique will be used so to model with all the features provided. For further reference on t-SNE, and additional examples, in other field of activity than the banking industry or the fraud prevention, the [tsne official website is a starting point][4]
 
-## References
+
 [1]:http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf "Visualizing Data using t-SNE by Van der Maaten and Hinton-2008"
 [2]:https://lvdmaaten.github.io/publications/papers/JMLR_2014.pdf "Accelerating t-SNE using Tree-Based Algorithms by Van der Maaten-2014"
 [3]:https://cran.r-project.org/web/packages/tsne/ "tsne: T-Distributed Stochastic Neighbor Embedding for R (t-SNE) by Justin Donaldson"
