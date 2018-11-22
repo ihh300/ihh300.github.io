@@ -164,7 +164,7 @@ Five training datasets were created so to be compared once the same classifier w
 
 ### Overview of metrics comparison
 The metrics were then compared as per figure below.
-![Metrics comparison ](/assets/images/credit_card/imbalance/imb_ccf_compa_metrics.jpg)
+![Metrics comparison ](/assets/images/credit_card/imbalance/imb_ccf_compa_metrics.png)
 
 This plot helps understand how the different sampling techniques impact the model performance. Here, comparison with under sampled dataset model shows lower performance in term of F1.
 
