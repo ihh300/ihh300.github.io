@@ -162,16 +162,9 @@ The Matthews correlation coefficient is fairly robust to data imbalance and ther
 Five training datasets were created so to be compared once the same classifier was applied. The 5 datasets were balanced.
 ![Training datasets generated - Balanced Class ](/assets/images/credit_card/imbalance/imb_ccf_compa_balance.jpg)
 
-### Overview of metrics comparison
-The metrics were then compared as per figure below.
-![Metrics comparison ](/assets/images/credit_card/imbalance/imb_ccf_compa_metrics.png)
-
-This plot helps understand how the different sampling techniques impact the model performance. Here, comparison with under sampled dataset model shows lower performance in term of F1.
-
-![Metrics visualisation ](/assets/images/credit_card/imbalance/imb_ccf_compa_plot.jpg)
-
 ### AUC comparison
 As AUC is higher with all 5 models than the original one, it will be safe to do a dual comparison between different classification models other than decision trees and to use as input the original and both sampled datasets to have a safe final approach.
+
 ![ROC curve ](/assets/images/credit_card/imbalance/imb_ccf_compa_ROC_curve.jpeg)
 
 ![AUC comparison ](/assets/images/credit_card/imbalance/imb_ccf_compa_AUC_plot.jpeg)
