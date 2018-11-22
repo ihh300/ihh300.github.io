@@ -184,6 +184,7 @@ For each model, the Matthews correlation coefficient were computed and compared.
 ## Conclusion
 Regarding re-sampling the training dataset, a subsequent article will focus on how to improve those results using other classifiers than decision tree and how to build different models and by ensembling those algorithms to create a scalable final model.
 
-[1]:https://cran.r-project.org/web/packages/ROSE/index.html "CRAN | ROSE: Random Over-Sampling Examples"
-[2]:https://cran.r-project.org/web/packages/DMwR/DMwR.pdf "CRAN | DwR: Data Mining with R' incl. SMOTE"
-[3]:https://cran.r-project.org/web/packages/rpart/index.html "CRAN | rpart: Recursive Partitioning and Regression Trees"
+
+[1]: https://cran.r-project.org/web/packages/ROSE/index.html "ROSE: Random Over-Sampling Examples"
+[2]: https://cran.r-project.org/web/packages/DMwR/DMwR.pdf "DwR: Data Mining with R' incl. SMOTE"
+[3]: https://cran.r-project.org/web/packages/rpart/index.html "rpart: Recursive Partitioning and Regression Trees"
