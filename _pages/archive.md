@@ -7,6 +7,9 @@ header:
   caption: "Data science ©ihh300"
 classes: wide
 ---
+**Machine Learning** is a field of artificial intelligence that studies the methods of building models that can be trained, as well as algorithms for their construction and learning.
+
+
 {% for post in site.posts %}
   * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
 {% endfor %}
