@@ -1,5 +1,6 @@
 ---
 layout: archive
+title: "Welcome !"
 author_profile: true
 excerpt: "Blog on data science, data analysis and visualization"
 header:
@@ -7,7 +8,6 @@ header:
   caption: "Data science ©ihh300"
 classes: wide
 ---
-### Welcome !
 This is the blog and portfolio of Isabelle H, Data Scientist.
 
 **Technologies I work on**:
