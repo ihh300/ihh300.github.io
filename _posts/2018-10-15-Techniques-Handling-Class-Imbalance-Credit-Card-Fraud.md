@@ -180,7 +180,7 @@ Comparing the different re-sampling techniques based on AUC, AUC is higher in de
 ![AUC comparison plot ](/assets/images/credit_card/imbalance/imb_ccf_compa_AUC_plot.jpeg)
 
 ### Matthews correlation coefficient comparison
-For each model, the Matthews correlation coefficient were computed and compared. Undersampled
+For each model, the Matthews correlation coefficient were computed and compared.
 
 ![Matthews correlation coefficient table ](/assets/images/credit_card/imbalance/imb_ccf_compa_MCC_Coeff.png)
 
