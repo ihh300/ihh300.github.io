@@ -46,7 +46,7 @@ Precision measures the probability of a sample classified as positive to actuall
 
 > Recall = TPR = TP/(TP+FN)
 
-TPR (True Positive Rate also called Recall or Sensitivity) measures the actual positive observations which are predicted correctly.  
+TPR (True Positive Rate also called Recall or Sensitivity) measures the actual positive observations which are predicted correctly.
 
 ### Metrics - F1 score
 
@@ -118,66 +118,77 @@ This approach is a cost-based approach where the model parameters are set-up suc
 
 ## Modeling - Supervised learning - Decision tree
 
-### Using a decision tree classifier
-Our model uses a Decision Tree classifier in order to predict fraudulent transactions. The module used is [r, Rpart][3].Decision tree builds classification or regression models in the form of a tree structure. It breaks down a data set into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed. The final result is a tree with decision nodes and leaf nodes.
+### Using a Random Forest classifier
+Our model uses a Random Forest classifier in order to predict fraudulent transactions. The module used is [r, RandomForest][3]. Random Forest is an Ensemble classifier which uses first multiple decision trees as weak learners to, then, bootstrap aggregate, a process called "bagging", the tree learners. Random Forest output is a stronger classifier.
 
-### Modeling with the decision tree classifier
+### Modeling with the Random Forest classifier
 To build and develop this model, I have followed the steps:
 1. Train/Test split with a 70/30 ratio
 2. Separate scaling (to avoid leaking information of each subsequent dataset)
 3. Hold out of the test dataset
 4. Creation of 5 different datasets from the training dataset: training, training under sampled, training oversampled, training both sampled, training post-ROSE, training post ROSE.
-5. Application of the decision tree classifier on each 6 datasets (original + the 5 created by the resampling)
+5. Application of the Random Forest classifier on each 6 datasets (original + the 5 created by the resampling)
 6. Prediction of the class on the test dataset
 
-## Performance of the decision tree classifier on imbalance data
-Using *Rpart*, a decision tree model is built whose Visualization is provided below.
-![Visualization of the decision tree model on an imbalanced dataset](/assets/images/credit_card/imbalance/imb_ccf_orig_tree.jpeg)
+## Random Forest on Imbalanced data
 
-### ROC curve and AUC
-When it comes to model evaluation, a decision tree on the imbalance dataset, gives poor performance in term of fraud detection with an AUC of 0.89 - The ROC curve is not recommended to assess model performance on imbalanced dataset and is just given as reference.
-![Visualization of ROC curve - Decision tree model on an imbalanced dataset](/assets/images/credit_card/imbalance/imb_ccf_orig_curve_roc.jpeg)
+### Variables importance
+Following the model building, we visualize the variables importance and variables V12, V14, V17, V10 stands out as main predictors.
+
+![Visualization of the variable importance an imbalanced dataset](/assets/images/credit_card/imbalance/imb_ccf_orig_importance.jpeg)
 
 ### Confusion matrix
+After prediction, we can then compute the confusion matrix
+![Confusion matrix - Random Forest on imbalanced dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_org.jpeg)
 
-The following confusion matrix provided shows a high number of false negative ie fraud which were not detected.
-- as 4 fold plot
-![Visualization of the confusion matrix - imbalanced dataset - 4fold](/assets/images/credit_card/imbalance/imb_ccf_orig_cm.jpeg)
-- and also with its metrics summary
-![Visualization of the confusion matrix - imbalanced dataset - summary](/assets/images/credit_card/imbalance/imb_ccf_orig_cm2.jpeg)
 
-### F1 score
-F1 Score, the weighted average of Precision and Recall, is 0.82 and this baseline value will be compared to other classifier in our next models comparison article as the aim of this project is to pick a model that has the best F1 score on the fraudulent class.
+## Random Forest on resampled data
 
-### Precision - Recall curve
-The Precision - Recall curve shows precision values for corresponding sensitivity (recall) values and its AUPRC is 0.68 which gives a baseline for the performance of classification models.
-![Visualization of Precision_recall curve - Decision tree model on an imbalanced dataset](/assets/images/credit_card/imbalance/imb_ccf_orig_curve_pr.jpeg)
+### Confusion matrices
+ ![Confusion matrix - Random Forest on undersampled dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_under.jpeg)
 
-### Matthews correlation coefficient
-The Matthews correlation coefficient is fairly robust to data imbalance and therefore is an interesting baseline metrics here, at 0.82.
+ ![Confusion matrix - Random Forest on oversampled dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_over.jpeg)
 
-## Performance of the decision tree classifier on balanced data
+ ![Confusion matrix - Random Forest on both sampled dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_both.jpeg)
+
+ ![Confusion matrix - Random Forest on ROSE dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_rose.jpeg)
+
+  ![Confusion matrix - Random Forest on SMOTE dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_smote.jegg)
 
 ### Dataset class ratio
 Five training datasets were created so to be compared once the same classifier was applied. The 5 datasets were balanced.
-![Training datasets generated - Balanced Class ](/assets/images/credit_card/imbalance/imb_ccf_compa_balance.jpg)
+![Training datasets generated - Balanced Class ](/assets/images/credit_card/imbalance/imb_ccf_compa_balance.png)
+
+### Metrics comparison
+In the table and plot below, the following metrics were grouped and then plotted. SMOTE and Undersampling offers the highest Recall.
+
+![Metrics comparison table ](/assets/images/credit_card/imbalance/imb_ccf_compa_metrics.png)
+
+![Metrics comparison plot ](/assets/images/credit_card/imbalance/imb_ccf_compa_metrics_plot.jpeg)
 
 ### AUC comparison
-As AUC is higher with all 5 models than the original one, it will be safe to do a dual comparison between different classification models other than decision trees and to use as input the original and both sampled datasets to have a safe final approach.
+Comparing the different re-sampling techniques based on AUC, AUC is higher in decreasing order for   
+1. SMOTE
+2. Undersampling
+3. ROSE
 
 ![ROC curve ](/assets/images/credit_card/imbalance/imb_ccf_compa_ROC_curve.jpeg)
 
-![AUC comparison ](/assets/images/credit_card/imbalance/imb_ccf_compa_AUC_plot.jpeg)
+![AUC comparison table ](/assets/images/credit_card/imbalance/imb_ccf_compa_AUC_value.png)
+
+![AUC comparison plot ](/assets/images/credit_card/imbalance/imb_ccf_compa_AUC_plot.jpeg)
 
 ### Matthews correlation coefficient comparison
-For each model, the Matthews correlation coefficient were computed and compared. With a lower performance with the original dataset tough.
+For each model, the Matthews correlation coefficient were computed and compared. Undersampled
 
-![Matthews correlation coefficient ](/assets/images/credit_card/imbalance/imb_ccf_compa_MCC_Coeff.jpeg)
+![Matthews correlation coefficient table ](/assets/images/credit_card/imbalance/imb_ccf_compa_MCC_Coeff.png)
+
+![Matthews correlation coefficient plot ](/assets/images/credit_card/imbalance/imb_ccf_plot_MCC_Coeff.jpeg)
 
 ## Conclusion
-Regarding re-sampling the training dataset, a subsequent article will focus on how to improve those results using other classifiers than decision tree and how to build different models and by ensembling those algorithms to create a scalable final model.
+Regarding re-sampling the training dataset, SMOTE and BOTH offers the best results. Next, a subsequent article will focus how to improve those results using other classifiers than Random Forest and how to build different models and by other Ensemble algorithms to create a scalable final model.
 
 
 [1]: https://cran.r-project.org/web/packages/ROSE/index.html "ROSE: Random Over-Sampling Examples"
 [2]: https://cran.r-project.org/web/packages/DMwR/DMwR.pdf "DwR: Data Mining with R' incl. SMOTE"
-[3]: https://cran.r-project.org/web/packages/rpart/index.html "rpart: Recursive Partitioning and Regression Trees"
+[3]: https://cran.r-project.org/package=randomForest "randomForest: Breiman and Cutler's Random Forests for Classification and Regression"
