@@ -116,7 +116,7 @@ smoothed-bootstrap approach.
 
 This approach is a cost-based approach where the model parameters are set-up such as misclassification of the minority class is weighted differently so a high misclassification cost is attributed when predicting False Positives or False Negatives instead of, usually, weighting them equally.
 
-## Modeling - Supervised learning - Decision tree
+## Modeling - Supervised learning - Random Forest 
 
 ### Using a Random Forest classifier
 Our model uses a Random Forest classifier in order to predict fraudulent transactions. The module used is [r, RandomForest][3]. Random Forest is an Ensemble classifier which uses first multiple decision trees as weak learners to, then, bootstrap aggregate, a process called "bagging", the tree learners. Random Forest output is a stronger classifier.
@@ -145,6 +145,7 @@ After prediction, we can then compute the confusion matrix
 ## Random Forest on resampled data
 
 ### Confusion matrices
+
  ![Confusion matrix - Random Forest on undersampled dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_under.jpeg)
 
  ![Confusion matrix - Random Forest on oversampled dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_over.jpeg)
@@ -152,8 +153,8 @@ After prediction, we can then compute the confusion matrix
  ![Confusion matrix - Random Forest on both sampled dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_both.jpeg)
 
  ![Confusion matrix - Random Forest on ROSE dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_rose.jpeg)
-
-  ![Confusion matrix - Random Forest on SMOTE dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_smote.jegg)
+ 
+ ![Confusion matrix - Random Forest on SMOTE dataset](/assets/images/credit_card/imbalance/imb_ccf_cm_rec_smote.jpeg)
 
 ### Dataset class ratio
 Five training datasets were created so to be compared once the same classifier was applied. The 5 datasets were balanced.
