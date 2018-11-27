@@ -187,7 +187,7 @@ For each model, the Matthews correlation coefficient were computed and compared.
 ![Matthews correlation coefficient plot ](/assets/images/credit_card/imbalance/imb_ccf_plot_MCC_Coeff.jpeg)
 
 ## Conclusion
-Regarding re-sampling the training dataset, SMOTE and BOTH offers the best results. Next, a subsequent article will focus how to improve those results using other classifiers than Random Forest and how to build different models and by other Ensemble algorithms to create a scalable final model.
+Regarding re-sampling the training dataset, SMOTE and BOTH offers the best results. Next, a subsequent article will focus how to improve those results using other classifiers than Random Forest so to create a scalable final model.
 
 
 [1]: https://cran.r-project.org/web/packages/ROSE/index.html "ROSE: Random Over-Sampling Examples"
