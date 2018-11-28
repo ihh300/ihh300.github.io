@@ -11,5 +11,5 @@ Machine Learning is a field of artificial intelligence that studies the methods 
 
 
 {% for post in site.posts %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
+  * [ {{ post.title }} ]({{ post.url }})
 {% endfor %}
