@@ -13,6 +13,14 @@ toc_sticky: true
 ---
 Fraud detection and its application in data science is a burgeonning field. This article gives an overview of the business challenges data scientists solve when dealing with fraud detection.
 
+### Highlight: fraud detection, the machine learning serie
+I have written a full serie of articles related to fraud detection based on a credit card fraud case study:
+
+* [Exploratory Data Analysis - fraud]({{ ihh300.github.io }}{% link _posts/2018-10-05-Exploratory-Data-Analysis-Credit-Card-Fraud.md %})
+* [Using t-SNE, as dimensionality reduction for fraud detection]({{ ihh300.github.io }}{% link _posts/2018-10-10-t-SNE-Dimensionality-Reduction-Credit-Card-Fraud.md %})
+* [Techniques to handle imbalanced dataset]({{ ihh300.github.io }}{% link _posts/2018-10-15-Techniques-Handling-Class-Imbalance-Credit-Card-Fraud.md %})
+* [Comparing ensemble approaches to improve model performance]({{ ihh300.github.io }}{% link _posts/2018-10-20-Ensemble-Approach-To-Improve-Model-Performance.md %})
+
 ### Fraud: a definition
 
 Fraud is defined as the wrongful or criminal deception intended to result in financial or personal gain.
