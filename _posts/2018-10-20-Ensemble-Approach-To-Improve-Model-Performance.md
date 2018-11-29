@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "Comparing Ensemble approaches to improve model performance"
-description: "Supervised learning, classification, Single and Ensemble approaches to detect fraud"
+title: "Comparing ensemble approaches to improve model performance"
+description: "Supervised learning, classification, Single and Ensemble, bagging and boosting, approaches to detect fraud"
 category: banking
 tags: [r, banking]
 comments: false
@@ -25,7 +25,6 @@ The aim of this project is to develop a data science solutions detecting fraudul
 
 ### What is the role of the data scientist in fraud prevention?
 Within the fraud prevention team, the role of the data scientist is to use a scientific approach so to design, fine-tune, validate and test various classification algorithm models to narrow the choice with its colleagues and stakeholders to a model efficient enough to be upscaled in production.
-LINK PROJECT
 
 ## Exploratory data Analysis
 A previous in-depth [Exploratory Data Analysis]({{ ihh300.github.io }}{% link _posts/2018-10-05-Exploratory-Data-Analysis-Credit-Card-Fraud.md %}) has analyzed the imbalance nature of this dataset with 492 fraudulent transactions out of 284,807 total transactions.
@@ -72,6 +71,7 @@ A Principal Component Analysis (PCA) has already been performed whose output are
 
 ### t-SNE
 t-Distributed Stochastic Neighbor Embedding (t-SNE) is a non-linear technique to reduce dimensionality using Barnes-Hut approximations and I have written in a [separate article]({{ ihh300.github.io }}{% link _posts/2018-10-10-t-SNE-Dimensionality-Reduction-Credit-Card-Fraud.md %}) about t-SNE and how it was applied to this dataset.
+
 ![t-SNE visualization on an imbalanced dataset](/assets/images/credit_card/tsne/tsne_ccf_imb.jpeg)
 
 ## Model execution and evaluation strategy
@@ -85,13 +85,10 @@ The aim of machine learning classification is to predict a discrete class label 
 ### Dataset split - Hold out of the test dataset
 As a pre-requisites to a scientific approach to data modeling, the test dataset has to be split randomly through stratification, from the training/validation one and kept as hold-out, and not to be used during the modeling phase.
 
-### Dataset split - Train/Validation datasets
-Then the training/validation dataset is split randomly between two trainings and model validation datasets.
-
 ### Five classification models
 A variety of algorithms exists so to predict the correct class of new instances by classifying successfully if the class may be legitimate or fraudulent, based on the transaction details.
 As the data are provided labelled (output is the Class, labelling a transaction fraudulent or not), supervised learning techniques are used to solve this binary classification problem.
-6 models were built and evaluated for predictive accuracy as a part of this project and to improve model performance, the models compared include Ensemble models (bagging and boosting):
+6 models were built and evaluated for predictive accuracy as a part of this project and to improve model performance, the models compared include **ensemble** models (bagging and boosting):
 - 2 single models: logistic regression and decision trees
 - 3 ensemble models: Random Forest, Adaboost and XGboost.
 
@@ -154,18 +151,15 @@ The MCC metric has been first introduced by B.W. Matthews to assess the performa
 As a first step in building the models, Logistic Regression and Decision Tree models are trained and the accuracy (Area Under the Curve - AUC score) is found to be higher at ~ 0.969 for the logistic regression.
 
 ### Logistic Regression
-Logistic Regression is a statistical method part of a larger class of algorithms known as Generalized Linear Model (glm) developed by Nelder and Wedderburn in 1972. Logistic regression finds the best fitting model to describe the relationship between the dichotomous Class (fraud our legitimate) and the set of independent variables (Vi and Amount). The logistic function is a Sigmoid function, which takes any real value between zero and one.
+Logistic Regression is a statistical method part of a larger class of algorithms known as Generalized Linear Model (glm) developed by Nelder and Wedderburn in 1972.  The logistic function is a Sigmoid function, which takes any real value between zero and one. Logistic regression finds the best fitting model to describe the relationship between the dichotomous Class (fraud our legitimate) and the set of independent variables (Vi and Amount).
 
 #### GLM Implementation
-In this project, Generalized linear model was implemented using R glm() function.
-
-#### GLM Hyperparameters setting
-To build our model, we set family=binomial
+In this project, Generalized linear model was implemented using R, glm() function, with set family=binomial.
 
 #### GLM Model building
 By using function summary() we obtain the results of our model:
 
-![Results of the logistic regression](/assets/images/credit_card/ensemble/ens_ccf_glm_r.jpeg)
+![Results of the logistic regression](/assets/images/credit_card/ensemble/ens_ccf_glm_r.jpg)
 
 The coefficients table gives the estimate values for the coefficients, or the betas, for our logistic regression model.
 
@@ -178,7 +172,7 @@ To evaluate the performance of a logistic regression model, the following metric
 
 In addition, we run the anova() function on the model to analyze the table of deviance.
 
-![Results of the logistic regression - Anova](/assets/images/credit_card/ensemble/ens_ccf_glm_anova.jpeg)
+![Results of the logistic regression - Anova](/assets/images/credit_card/ensemble/ens_ccf_glm_anova.jpg)
 
 #### GLM Prediction
 We assess the predictive ability of the model on the test dataset and then we convert the glm output probabilities to predictions using a threshold value of 0.5. We aim to optimize the threshold to minimize the False Negative Rate by increasing the classification threshold with the risk of identifying some legitimate transactions as fraudulent.
@@ -201,7 +195,7 @@ From the metrics computation, we have the following prediction performance metri
 classification and regression tree (CART) approach was developed by Breiman et al. (1984). Decision tree builds classification or regression models in the form of a tree structure. Here, we predict a categorical variable so we build a classification tree. The recursive partitioning algorithm creates a set of rules, splitting the data set into smaller and smaller subsets to incrementally develop the final result: a classification tree with decision nodes and leaf nodes.
 
 #### DT implementation
-In R, CART (Classification & Regression Trees) is done with [r, Rpart][1] .When it comes to pre-processing, tree-based methods performs usually well on unprocessed data (without normalizing, centering, scaling features).
+In R, CART (Classification & Regression Trees) is done with [R, Rpart][1] .When it comes to pre-processing, tree-based methods performs usually well on unprocessed data (without normalizing, centering, scaling features).
 
 #### DT visualization
 The decision rules generated by the CART (Classification & Regression Trees) predictive model is visualized as a binary tree. The leaves are the classification we assign to the target Class.
@@ -217,7 +211,7 @@ Following the prediction, we visualize the confusion matrix.
 From the metrics computation, we have the following prediction performance metrics for the decision tree algorithm.
 
 | Metrics  | DT performance |
-|---:|:---:|
+|:---|:---:|
 |AUC| 0.897 |
 |AUPRC | 0.686|
 |Accuracy| 0.999 |
@@ -236,7 +230,7 @@ Random Forest is an Ensemble classifier which uses first multiple decision trees
 >Note the main difference between Random Forests and XGBoost: in Random Forests, trees are independent, and as, in boosting, the tree N+1 focus its learning on the loss (what has not been modeled by the tree N).
 
 #### RF Implementation
-The module used is [r, RandomForest][2] based on Breiman and Cutler's Random Forests for Classification and Regression.
+The module used is [R, RandomForest][2] based on Breiman and Cutler's Random Forests for Classification and Regression.
 
 #### RF Hyperparameters setting
 To build our model, we first need to set the number of trees. This number is the lower which minimizes the error.
@@ -251,7 +245,7 @@ Random Forest makes it possible to measure the relative importance of each featu
 * Gini Importance or Mean Decrease in Impurity
 * Permutation Importance or Mean Decrease in Accuracy
 
-![Random Forest - Features Importance table](/assets/images/credit_card/ensemble/ens_ccf_rf_imp_tbl.jpeg)
+ ![Random Forest - Features Importance table](/assets/images/credit_card/ensemble/ens_ccf_rf_imp_tbl.jpeg)
 
 ![Random Forest - Features Importance plot](/assets/images/credit_card/ensemble/ens_ccf_rf_imp_plot.jpeg)
 
@@ -264,7 +258,7 @@ Following the prediction on the test dataset, we visualize the confusion matrix 
 From the metrics computation, we have the following prediction performance metrics for Random Forest
 
 | Metrics  | RF performance |
-|---:|:---:|
+|:---|:---:|
 |AUC| 0.901 |
 |AUPRC | 0.747|
 |Accuracy| 0.999 |
@@ -299,7 +293,7 @@ Predictions are made by calculating the weighted average of the weak classifiers
 From the metrics computation, we have the following prediction performance metrics for Adaboost
 
 | Metrics  | AdaBoost performance |
-|---:|:---:|
+|:---|:---:|
 |AUC| 0.955 |
 |AUPRC | 0.848 |
 |Accuracy| 0.999 |
@@ -308,10 +302,10 @@ From the metrics computation, we have the following prediction performance metri
 |F1 | 0.850 |
 
 ### XGBoost
-
 XGBoost relies on Gradient Boosting, a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. It builds the model in a stage-wise fashion like other boosting methods do, and it generalizes them by allowing optimization of an arbitrary differentiable loss function. XGBoost is one of the implementations of Gradient Boosting concept, but what makes XGBoost unique is that it uses “a more regularized model formalization to control over-fitting, which gives it better performance,” according to the author of the algorithm, Tianqi Chen. XGBoost performance optimization is achieved through parallelization of tree construction, distributed or out of core Computing, and cache optimization.
+
 ##### Implementation
-To implement XGBoost, [r, XGboost][4] package is used. XGBoost requires the predictors to be numeric and to have both training and test data in numeric matrix format.
+To implement XGBoost, [R, XGboost][4] package is used. XGBoost requires the predictors to be numeric and to have both training and test data in numeric matrix format.
 
 ##### Hyperparameters setting
 The hyperparameters to be set are:
@@ -322,10 +316,11 @@ The hyperparameters to be set are:
 
 ##### Building the model
 Each line shows how well the model explains our data. Overfitting after a number of iteration means the number of rounds should be reduced.
+
 ##### Feature Importance
 Each feature is grouped by importance with k-means clustering. We build the feature importance data table as XGBoost shows which predictors are the most influential on the Classification prediction.
 
-![XGBoost - Features Importance table](/assets/images/credit_card/ensemble/ens_ccf_xg_imp_tbl.jpg)
+![XGBoost - Features Importance table](/assets/images/credit_card/ensemble/ens_ccf_xg_imp_tbl.jpeg)
 
 ![XGBoost - Features Importance plot](/assets/images/credit_card/ensemble/ens_ccf_xg_imp_plot.jpeg)
 * Features Importance table
@@ -334,6 +329,7 @@ Each feature is grouped by importance with k-means clustering. We build the feat
 
 ##### Prediction
 We then test the model by applying it to the test data and we visualize the prediction results using the confusion matrix.
+
 ![Confusion Matrix XGBoost](/assets/images/credit_card/ensemble/ens_ccf_cm_xg.jpeg)
 
 ##### Evaluation
@@ -357,28 +353,28 @@ Comparing the different re-sampling techniques based on AUC, AUC is higher in de
 2. Logistic regression
 3. AdaBoost
 
-![ROC curve ](/assets/images/credit_card/imbalance/ens_ccf_compa_ROC_curve.jpeg)
+![ROC curve ](/assets/images/credit_card/ensemble/ens_ccf_compa_ROC_curve.jpeg)
 
-![AUC comparison table ](/assets/images/credit_card/imbalance/ens_ccf_compa_auc_value.png)
+![AUC comparison table ](/assets/images/credit_card/ensemble/ens_ccf_compa_auc_value.png)
 
-![AUC comparison plot ](/assets/images/credit_card/imbalance/ens_ccf_compa_auc_plot.jpeg)
+![AUC comparison plot ](/assets/images/credit_card/ensemble/ens_ccf_compa_auc_plot.jpeg)
 
 ### Recall, Precision, F1 comparison
 In the table and plot below, the following metrics were grouped and then plotted.
 
-![Metrics comparison table ](/assets/images/credit_card/imbalance/ens_ccf_compa_metrics.png)
+![Metrics comparison table ](/assets/images/credit_card/ensemble/ens_ccf_compa_metrics.png)
 
-![Metrics comparison plot ](/assets/images/credit_card/imbalance/ens_ccf_compa_metrics_plot.jpeg)
+![Metrics comparison plot ](/assets/images/credit_card/ensemble/ens_ccf_compa_metrics_plot.jpeg)
 
 ### Matthews Coefficient comparison
 For each model, the Matthews correlation coefficient were computed and compared.
 
-![Matthews correlation coefficient table ](/assets/images/credit_card/imbalance/ens_ccf_compa_MCC_Coeff.png)
+![Matthews correlation coefficient table ](/assets/images/credit_card/ensemble/ens_ccf_compa_MCC_Coeff.png)
 
-![Matthews correlation coefficient plot ](/assets/images/credit_card/imbalance/ens_ccf_plot_MCC_Coeff.jpeg)
+![Matthews correlation coefficient plot ](/assets/images/credit_card/ensemble/ens_ccf_plot_MCC_Coeff.jpeg)
 
 ## Results and findings
-At this stage, we evaluate the final model on the test hold-out data and when assessing the final results, we meet our objective, to be able to achieve relatively good predictions so prevent fraud. The estimated saving can be calculated as XXXX.
+At this stage, we evaluate the final model on the test hold-out data and when assessing the final results, we meet our objective, to be able to achieve relatively good predictions so to prevent fraud. 
 
 
 [1]: https://cran.r-project.org/web/packages/rpart/index.html "rpart: Recursive Partitioning and Regression Trees"
