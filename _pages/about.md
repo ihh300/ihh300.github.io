@@ -22,3 +22,6 @@ My background in engineering, physics and marketing has given me a strong founda
 As a project or team manager, I enjoy coordinating team work using Six Sigma (Certified Lean Six Sigma Green Belt) or Agile (Certified AGILE Scrum Master®).
 
 I am bilingual English/French and have knowledge of Spanish and German.
+
+-----
+ All opinions and views are my own and do not represent my employer(s).
