@@ -3,7 +3,7 @@
 ##### Description
 --------------------------
 
-My GitPage website including my data science portfolio and articles.
+My GitPage website including my software engineering, machine learning engineering and data science portfolio and articles.
 
 ##### Website design and creation
 --------------------------
