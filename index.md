@@ -8,7 +8,7 @@ header:
   caption: "Data science ©ihh300"
 classes: wide
 ---
-This is the blog and portfolio of Isabelle H, Data Scientist.
+This is the blog and portfolio of Isabelle H, Software Engineer, previously Data Scientist.
 
 **Technologies I work on**:
 - Machine Learning (R and Python)
